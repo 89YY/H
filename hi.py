@@ -13,11 +13,11 @@ def check_username_availability(username):
         print(f'Block - {username}')
 
 def generate_random_username():
-    return ''.join(random.choice('qwertyuiopasdfghjklzxcvbnm1234567890') for _ in range(5))
+    return ''.join(random.choice('qwertyuiopasdfghjklzxcvbnm1234567890') for _ in range(2))
 
 def check():
     while True:
-        user = generate_random_username()
+        user = str(generate_random_username()+'YY')
         check_username_availability(user)
 
 check()
